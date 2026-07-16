@@ -1,5 +1,11 @@
 function ServiceDetailsPage() {
-  return <h1>ServiceDetails Page</h1>;
+  return (
+    <section className='section'>
+      <div className='container'>
+        <h1 className='section-title'>Service Details Page</h1>
+      </div>
+    </section>
+  );
 }
 
 export default ServiceDetailsPage;

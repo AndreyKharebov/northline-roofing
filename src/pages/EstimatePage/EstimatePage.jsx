@@ -1,5 +1,11 @@
 function EstimatePage() {
-  return <h1>Estimate Page</h1>;
+  return (
+    <section className='section'>
+      <div className='container'>
+        <h1 className='section-title'>Estimate Page</h1>
+      </div>
+    </section>
+  );
 }
 
 export default EstimatePage;

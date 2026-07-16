@@ -13,6 +13,8 @@ import FaqPage from './pages/FaqPage/FaqPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import EstimatePage from './pages/EstimatePage/EstimatePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
+import TermsPage from './pages/TermsPage/TermsPage';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path='/faq' element={<FaqPage />} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/request-estimate' element={<EstimatePage />} />
+          <Route path='/privacy-policy' element={<PrivacyPage />} />
+          <Route path='/terms-of-service' element={<TermsPage />} />
 
           <Route path='*' element={<NotFoundPage />} />
         </Route>

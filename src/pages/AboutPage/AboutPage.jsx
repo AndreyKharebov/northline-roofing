@@ -1,7 +1,11 @@
 function AboutPage() {
   return (
-    <h1>About Page</h1>
-  )
+    <section className='section'>
+      <div className='container'>
+        <h1 className='section-title'>About Page</h1>
+      </div>
+    </section>
+  );
 }
 
-export default AboutPage
+export default AboutPage;
