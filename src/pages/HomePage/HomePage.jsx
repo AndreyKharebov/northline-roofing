@@ -6,18 +6,20 @@ import ProjectsPreview from '../../components/home/Projects/ProjectsPreview';
 import ProcessPreview from '../../components/home/Process/ProcessPreview';
 import ReviewsPreview from '../../components/home/Reviews/ReviewsPreview';
 import FaqPreview from '../../components/home/Faq/FaqPreview';
+import EstimatePreview from '../../components/home/Estimate/EstimatePreview';
 
 function HomePage() {
   return (
     <>
-      {/* <Hero />
+      <Hero />
       <Stats />
       <ServicesPreview />
       <AboutPreview />
       <ProjectsPreview />
       <ProcessPreview />
-      <ReviewsPreview /> */}
+      <ReviewsPreview />
       <FaqPreview />
+      <EstimatePreview />
     </>
   );
 }
