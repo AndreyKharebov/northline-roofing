@@ -5,17 +5,19 @@ import AboutPreview from '../../components/home/About/AboutPreview';
 import ProjectsPreview from '../../components/home/Projects/ProjectsPreview';
 import ProcessPreview from '../../components/home/Process/ProcessPreview';
 import ReviewsPreview from '../../components/home/Reviews/ReviewsPreview';
+import FaqPreview from '../../components/home/Faq/FaqPreview';
 
 function HomePage() {
   return (
     <>
-      <Hero />
+      {/* <Hero />
       <Stats />
       <ServicesPreview />
       <AboutPreview />
       <ProjectsPreview />
       <ProcessPreview />
-      <ReviewsPreview />
+      <ReviewsPreview /> */}
+      <FaqPreview />
     </>
   );
 }
