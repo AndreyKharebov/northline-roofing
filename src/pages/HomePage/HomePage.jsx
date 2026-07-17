@@ -4,6 +4,7 @@ import ServicesPreview from '../../components/home/Services/ServicesPreview';
 import AboutPreview from '../../components/home/About/AboutPreview';
 import ProjectsPreview from '../../components/home/Projects/ProjectsPreview';
 import ProcessPreview from '../../components/home/Process/ProcessPreview';
+import ReviewsPreview from '../../components/home/Reviews/ReviewsPreview';
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <AboutPreview />
       <ProjectsPreview />
       <ProcessPreview />
+      <ReviewsPreview />
     </>
   );
 }
