@@ -1,10 +1,16 @@
+import ServicesCta from '../../components/services/ServicesCta/ServicesCta';
+import ServicesGrid from '../../components/services/ServicesGrid/ServicesGrid';
+import ServicesHero from '../../components/services/ServicesHero/ServicesHero';
+import Stats from '../../components/home/Stats/Stats'; // NEED TO MOVE TO COMMON
+
 function ServicesPage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Services Page</h1>
-      </div>
-    </section>
+    <>
+      <ServicesHero />
+      <Stats />
+      <ServicesGrid />
+      <ServicesCta />
+    </>
   );
 }
 
