@@ -1,10 +1,20 @@
+import FeaturedReviews from '../../components/reviews/FeaturedReviews/FeaturedReviews';
+import RatingsSummary from '../../components/reviews/RatingsSummary/RatingsSummary';
+import ReviewsBottom from '../../components/reviews/ReviewsBottom/ReviewsBottom';
+import ReviewsHero from '../../components/reviews/ReviewsHero/ReviewsHero';
+import ReviewsList from '../../components/reviews/ReviewsList/ReviewsList';
+import ServiceAreaStrip from '../../components/reviews/ServiceAreaStrip/ServiceAreaStrip';
+
 function ReviewsPage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Reviews Page</h1>
-      </div>
-    </section>
+    <>
+      <ReviewsHero />
+      <ServiceAreaStrip />
+      <RatingsSummary />
+      <FeaturedReviews />
+      <ReviewsList />
+      <ReviewsBottom />
+    </>
   );
 }
 

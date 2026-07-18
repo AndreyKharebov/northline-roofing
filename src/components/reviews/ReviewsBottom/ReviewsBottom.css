@@ -1,0 +1,115 @@
+.reviews-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-bottom__trust {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.reviews-bottom__trust-content,
+.reviews-bottom__cta-content {
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+  padding: 48px var(--page-padding);
+}
+
+.reviews-bottom__eyebrow,
+.reviews-bottom__cta-eyebrow {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reviews-bottom__eyebrow {
+  color: rgb(255 255 255 / 65%);
+}
+
+.reviews-bottom__title,
+.reviews-bottom__cta-title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.reviews-bottom__description {
+  margin-top: 16px;
+  color: rgb(255 255 255 / 75%);
+  line-height: 1.7;
+}
+
+.reviews-bottom__trust-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.reviews-bottom__trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.reviews-bottom__cta {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background);
+}
+
+.reviews-bottom__cta-eyebrow {
+  color: var(--color-primary);
+}
+
+.reviews-bottom__cta-description {
+  margin-top: 16px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.reviews-bottom__cta .button {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.reviews-bottom__phone {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+}
+
+@media (min-width: 560px) {
+  .reviews-bottom__trust-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-bottom__cta .button {
+    width: auto;
+  }
+
+  .reviews-bottom__phone {
+    text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  .reviews-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews-bottom__trust-content,
+  .reviews-bottom__cta-content {
+    padding: 72px;
+  }
+
+  .reviews-bottom__title,
+  .reviews-bottom__cta-title {
+    font-size: 3rem;
+  }
+}

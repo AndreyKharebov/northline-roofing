@@ -1,0 +1,16 @@
+.reviews-list {
+  background-color: var(--color-white);
+}
+
+.reviews-list__title {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reviews-list__items {
+  margin-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
