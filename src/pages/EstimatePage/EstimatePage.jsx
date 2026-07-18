@@ -1,10 +1,18 @@
+import EstimateBenefits from '../../components/estimate/EstimateBenefits/EstimateBenefits';
+import EstimateForm from '../../components/estimate/EstimateForm/EstimateForm';
+import EstimateHero from '../../components/estimate/EstimateHero/EstimateHero';
+import EstimateSteps from '../../components/estimate/EstimateSteps/EstimateSteps';
+import EstimateTrust from '../../components/estimate/EstimateTrust/EstimateTrust';
+
 function EstimatePage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Estimate Page</h1>
-      </div>
-    </section>
+    <>
+      <EstimateHero />
+      <EstimateBenefits />
+      <EstimateForm />
+      <EstimateSteps />
+      <EstimateTrust />
+    </>
   );
 }
 
