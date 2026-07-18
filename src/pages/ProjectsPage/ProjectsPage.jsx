@@ -1,10 +1,16 @@
+import ProjectsCta from '../../components/projects/ProjectsCta/ProjectsCta';
+import ProjectsGallery from '../../components/projects/ProjectsGallery/ProjectsGallery';
+import ProjectsHero from '../../components/projects/ProjectsHero/ProjectsHero';
+import QualityCommitment from '../../components/projects/QualityCommitment/QualityCommitment';
+
 function ProjectsPage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Projects Page</h1>
-      </div>
-    </section>
+    <>
+      <ProjectsHero />
+      <ProjectsGallery />
+      <QualityCommitment />
+      <ProjectsCta />
+    </>
   );
 }
 
