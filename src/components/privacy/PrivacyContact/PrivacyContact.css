@@ -1,0 +1,65 @@
+.privacy-contact {
+  background-color: var(--color-background);
+}
+
+.privacy-contact__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-block: 48px;
+}
+
+.privacy-contact__content {
+  max-width: 680px;
+}
+
+.privacy-contact__eyebrow {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.privacy-contact__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.privacy-contact__description {
+  margin-top: 14px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.privacy-contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-style: normal;
+}
+
+.privacy-contact__details a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.privacy-contact__details span {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+@media (min-width: 760px) {
+  .privacy-contact__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+  }
+
+  .privacy-contact__details {
+    flex: 0 0 280px;
+  }
+}
