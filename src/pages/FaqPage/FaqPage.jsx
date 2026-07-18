@@ -1,10 +1,16 @@
+import FaqContent from '../../components/faq/FaqContent/FaqContent';
+import FaqHero from '../../components/faq/FaqHero/FaqHero';
+import QuestionForm from '../../components/faq/QuestionForm/QuestionForm';
+import TrustStrip from '../../components/faq/TrustStrip/TrustStrip';
+
 function FaqPage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Faq Page</h1>
-      </div>
-    </section>
+    <>
+      <FaqHero />
+      <TrustStrip />
+      <FaqContent />
+      <QuestionForm />
+    </>
   );
 }
 
