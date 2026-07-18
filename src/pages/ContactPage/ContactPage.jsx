@@ -1,10 +1,18 @@
+import BusinessHours from '../../components/contact/BusinessHours/BusinessHours';
+import ContactCta from '../../components/contact/ContactCta/ContactCta';
+import ContactHero from '../../components/contact/ContactHero/ContactHero';
+import ContactMain from '../../components/contact/ContactMain/ContactMain';
+import ServiceArea from '../../components/contact/ServiceArea/ServiceArea';
+
 function ContactPage() {
   return (
-    <section className='section'>
-      <div className='container'>
-        <h1 className='section-title'>Contact Page</h1>
-      </div>
-    </section>
+    <>
+      <ContactHero />
+      <ContactMain />
+      <ServiceArea />
+      <BusinessHours />
+      <ContactCta />
+    </>
   );
 }
 
