@@ -1,0 +1,20 @@
+.service-faq-section {
+  background-color: var(--color-white);
+}
+
+.service-faq-section__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@media (min-width: 900px) {
+  .service-faq-section__layout {
+    display: grid;
+    grid-template-columns:
+      minmax(230px, 0.55fr)
+      minmax(0, 1.75fr);
+    align-items: start;
+    gap: 42px;
+  }
+}

@@ -1,0 +1,20 @@
+.service-social-proof {
+  background-color: var(--color-white);
+}
+
+.service-social-proof__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 960px) {
+  .service-social-proof__layout {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1.5fr)
+      minmax(280px, 0.8fr);
+    align-items: stretch;
+    gap: 34px;
+  }
+}

@@ -1,0 +1,153 @@
+.service-estimate-form {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.service-estimate-form__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  padding-block: 56px;
+}
+
+.service-estimate-form__content {
+  max-width: 500px;
+}
+
+.service-estimate-form__eyebrow {
+  color: rgb(255 255 255 / 68%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-estimate-form__title {
+  margin-top: 12px;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.service-estimate-form__description {
+  margin-top: 18px;
+  color: rgb(255 255 255 / 76%);
+  line-height: 1.7;
+}
+
+.service-estimate-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-estimate-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-estimate-form__field label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.service-estimate-form input,
+.service-estimate-form select,
+.service-estimate-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.service-estimate-form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.service-estimate-form input:focus,
+.service-estimate-form select:focus,
+.service-estimate-form textarea:focus {
+  outline: 3px solid rgb(255 255 255 / 25%);
+  outline-offset: 2px;
+}
+
+.service-estimate-form input[aria-invalid='true'],
+.service-estimate-form textarea[aria-invalid='true'] {
+  border-color: #fda29b;
+}
+
+.service-estimate-form__error {
+  color: #ffd2cc;
+  font-size: 0.78rem;
+}
+
+.service-estimate-form__submit {
+  min-height: 50px;
+  padding: 12px 18px;
+  border-radius: var(--radius-small);
+  background-color: #19734f;
+  color: var(--color-white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.service-estimate-form__submit:hover {
+  background-color: #155f42;
+}
+
+.service-estimate-form__success {
+  padding: 12px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: var(--radius-small);
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.service-estimate-form__phone {
+  text-align: center;
+}
+
+.service-estimate-form__phone a {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+@media (min-width: 680px) {
+  .service-estimate-form__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-estimate-form__field--message {
+    grid-row: span 2;
+  }
+
+  .service-estimate-form__submit,
+  .service-estimate-form__success,
+  .service-estimate-form__phone {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 920px) {
+  .service-estimate-form__layout {
+    display: grid;
+    grid-template-columns:
+      minmax(280px, 0.72fr)
+      minmax(0, 1.28fr);
+    align-items: center;
+    gap: 72px;
+  }
+
+  .service-estimate-form__title {
+    font-size: 3.5rem;
+  }
+}
