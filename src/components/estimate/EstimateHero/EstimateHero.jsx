@@ -1,4 +1,4 @@
-import estimateHeroImage from '../../../assets/images/hero-house.webp';
+import estimateHeroImage from '../../../assets/images/home/home-hero-house.webp';
 
 import './EstimateHero.css';
 

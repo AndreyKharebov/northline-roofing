@@ -15,9 +15,6 @@ import ProjectTrustStrip from '../../components/projectDetails/ProjectTrustStrip
 function ProjectDetailsPage() {
   const { projectSlug } = useParams();
 
-  console.log(projectSlug);
-  // complete-roof-system-abington
-
   const project = projects.find(
     (projectItem) => projectItem.slug === projectSlug,
   );
@@ -25,8 +22,6 @@ function ProjectDetailsPage() {
   if (!project) {
     return <NotFoundPage />;
   }
-
-  console.log(project);
 
   return (
     <>

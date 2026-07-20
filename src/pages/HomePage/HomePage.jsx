@@ -1,5 +1,4 @@
-import Hero from '../../components/home/Hero/hero';
-import Stats from '../../components/home/Stats/Stats';
+// import Stats from '../../components/home/Stats/Stats';
 import ServicesPreview from '../../components/home/Services/ServicesPreview';
 import AboutPreview from '../../components/home/About/AboutPreview';
 import ProjectsPreview from '../../components/home/Projects/ProjectsPreview';
@@ -8,11 +7,16 @@ import ReviewsPreview from '../../components/home/Reviews/ReviewsPreview';
 import FaqPreview from '../../components/home/Faq/FaqPreview';
 import EstimatePreview from '../../components/home/Estimate/EstimatePreview';
 
+import HomeHero from '../../components/home/homeHero/HomeHero';
+
+import HomeServiceArea from '../../components/home/homeServiceAreaStrip/homeServiceArea';
+
 function HomePage() {
   return (
     <>
-      <Hero />
-      <Stats />
+      <HomeHero />
+      <HomeServiceArea />
+
       <ServicesPreview />
       <AboutPreview />
       <ProjectsPreview />
