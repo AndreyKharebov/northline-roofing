@@ -1,0 +1,300 @@
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.page-hero__container {
+  position: relative;
+}
+
+.page-hero__layout {
+  display: grid;
+  gap: 48px;
+  padding-block: 56px;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.page-hero__eyebrow {
+  margin: 0 0 14px;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.page-hero__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.page-hero__description {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.page-hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.page-hero__actions .button {
+  width: 100%;
+}
+
+/* Изображение */
+
+.page-hero__media {
+  position: relative;
+  /* width: calc(100% - 18px); */
+  width: 100%;
+  /* min-height: 280px; */
+  min-height: 220px;
+  margin-left: auto;
+  padding-bottom: 18px;
+}
+
+.page-hero__media-background {
+  position: absolute;
+  right: -18px;
+  bottom: 0;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  border-radius: 18px;
+  background-color: var(--color-primary);
+}
+
+.page-hero__image {
+  position: absolute;
+  inset: 0 0 18px;
+  z-index: 1;
+  border-radius: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Декоративные точки */
+
+.page-hero__dots {
+  position: absolute;
+  top: -22px;
+  left: -14px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 5px);
+  gap: 9px;
+  pointer-events: none;
+}
+
+.page-hero__dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+/* =========================================================
+   Белый фон, зелёная подложка
+   ========================================================= */
+
+.page-hero--white {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.page-hero--white .page-hero__eyebrow {
+  color: var(--color-primary);
+}
+
+.page-hero--white .page-hero__description {
+  color: var(--color-text-light);
+}
+
+.page-hero--white .page-hero__media-background {
+  background-color: var(--color-primary);
+}
+
+.page-hero--white .page-hero__dots span {
+  background-color: var(--color-primary);
+}
+
+/* =========================================================
+   Зелёный фон, белая подложка
+   ========================================================= */
+
+.page-hero--green {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.page-hero--green .page-hero__eyebrow,
+.page-hero--green .page-hero__description {
+  color: var(--color-white);
+}
+
+.page-hero--green .page-hero__media-background {
+  background-color: var(--color-white);
+}
+
+.page-hero--green .page-hero__dots span {
+  background-color: var(--color-white);
+}
+
+/* =========================================================
+   Минималистичный вариант
+   ========================================================= */
+
+.page-hero--minimal {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.page-hero--minimal .page-hero__layout {
+  display: block;
+  padding-block: 48px;
+}
+
+.page-hero--minimal .page-hero__content {
+  max-width: 760px;
+}
+
+.page-hero--minimal .page-hero__title {
+  max-width: 760px;
+  font-size: 2.5rem;
+}
+
+.page-hero--minimal .page-hero__description {
+  max-width: 680px;
+  margin-top: 16px;
+}
+
+.page-hero--minimal .page-hero__actions {
+  margin-top: 24px;
+}
+
+/* =========================================================
+   Размеры
+   ========================================================= */
+
+.page-hero--compact .page-hero__layout {
+  padding-block: 44px;
+}
+
+.page-hero--large .page-hero__layout {
+  padding-block: 64px;
+}
+
+/* =========================================================
+   От 560px
+   ========================================================= */
+
+@media (min-width: 560px) {
+  .page-hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-hero__actions .button {
+    width: auto;
+  }
+
+  .page-hero__media {
+    min-height: 380px;
+  }
+
+  .page-hero__dots {
+    top: -24px;
+    left: -18px;
+  }
+}
+
+/* =========================================================
+   Desktop
+   ========================================================= */
+
+@media (min-width: 860px) {
+  .page-hero__layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 64px;
+    min-height: 600px;
+    align-items: center;
+    padding-block: 72px;
+  }
+
+  .page-hero__title {
+    font-size: 4.5rem;
+  }
+
+  .page-hero__description {
+    font-size: 1.1rem;
+  }
+
+  .page-hero__actions {
+    margin-top: 32px;
+  }
+
+  .page-hero__media {
+    width: calc(100% - 28px);
+    min-height: 430px;
+    padding-bottom: 34px;
+  }
+
+  .page-hero__media-background {
+    right: -28px;
+    width: calc(100% - 48px);
+    height: calc(100% - 46px);
+    border-radius: 22px;
+  }
+
+  .page-hero__image {
+    inset: 0 0 34px;
+    border-radius: 20px;
+  }
+
+  .page-hero__dots {
+    top: -28px;
+    left: -28px;
+    grid-template-columns: repeat(4, 6px);
+    gap: 11px;
+  }
+
+  .page-hero__dots span {
+    width: 6px;
+    height: 6px;
+  }
+
+  .page-hero--compact .page-hero__layout {
+    min-height: 480px;
+    padding-block: 56px;
+  }
+
+  .page-hero--large .page-hero__layout {
+    min-height: 680px;
+    padding-block: 88px;
+  }
+
+  .page-hero--minimal .page-hero__layout {
+    min-height: auto;
+    padding-block: 72px;
+  }
+
+  .page-hero--minimal .page-hero__title {
+    font-size: 4rem;
+  }
+}

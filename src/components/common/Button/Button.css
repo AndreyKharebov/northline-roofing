@@ -24,6 +24,16 @@
   background-color: var(--color-primary-dark);
 }
 
+.button--primary-light {
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.button--primary-light:hover {
+  background: #eaf0e8;
+}
+
 .button--secondary {
   border-color: var(--color-primary);
   background-color: transparent;
