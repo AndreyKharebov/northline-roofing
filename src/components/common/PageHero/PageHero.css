@@ -143,7 +143,10 @@
   color: var(--color-white);
 }
 
-.page-hero--green .page-hero__eyebrow,
+.page-hero--green .page-hero__eyebrow {
+  color: #D7B56D;
+}
+
 .page-hero--green .page-hero__description {
   color: var(--color-white);
 }
@@ -161,8 +164,8 @@
    ========================================================= */
 
 .page-hero--minimal {
-  background-color: var(--color-white);
-  color: var(--color-text);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .page-hero--minimal .page-hero__layout {
@@ -174,6 +177,10 @@
   max-width: 760px;
 }
 
+.page-hero--minimal .page-hero__eyebrow {
+  color: #D7B56D;
+}
+
 .page-hero--minimal .page-hero__title {
   max-width: 760px;
   font-size: 2.5rem;
@@ -182,6 +189,7 @@
 .page-hero--minimal .page-hero__description {
   max-width: 680px;
   margin-top: 16px;
+  color: var(--color-white);
 }
 
 .page-hero--minimal .page-hero__actions {

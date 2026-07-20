@@ -1,6 +1,7 @@
-import PrivacyHero from '../../components/privacy/PrivacyHero/PrivacyHero';
 import PrivacyDocument from '../../components/privacy/PrivacyDocument/PrivacyDocument';
 import PrivacyContact from '../../components/privacy/PrivacyContact/PrivacyContact';
+
+import PageHero from '../../components/common/PageHero/PageHero';
 
 const privacySections = [
   {
@@ -155,14 +156,14 @@ const privacySections = [
 function PrivacyPage() {
   return (
     <>
-      <PrivacyHero
+      <PageHero
+        eyebrow='July 18, 2026'
         title='Privacy Policy'
         description='This policy explains how information may be collected, used, stored, and shared when you interact with the Northline Roofing & Exteriors website.'
-        updatedDate='July 18, 2026'
+        type='minimal'
+        size='compact'
       />
-
       <PrivacyDocument sections={privacySections} />
-
       <PrivacyContact />
     </>
   );

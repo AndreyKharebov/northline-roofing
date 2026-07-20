@@ -1,6 +1,7 @@
-import TermsHero from '../../components/terms/TermsHero/TermsHero';
 import TermsDocument from '../../components/terms/TermsDocument/TermsDocument';
 import TermsContact from '../../components/terms/TermsContact/TermsContact';
+
+import PageHero from '../../components/common/PageHero/PageHero';
 
 const termsSections = [
   {
@@ -183,14 +184,14 @@ const termsSections = [
 function TermsPage() {
   return (
     <>
-      <TermsHero
+      <PageHero
+        eyebrow='July 18, 2026'
         title='Terms of Service'
         description='These terms explain the conditions governing your use of the Northline Roofing & Exteriors website and its online forms.'
-        updatedDate='July 18, 2026'
+        type='minimal'
+        size='compact'
       />
-
       <TermsDocument sections={termsSections} />
-
       <TermsContact />
     </>
   );
