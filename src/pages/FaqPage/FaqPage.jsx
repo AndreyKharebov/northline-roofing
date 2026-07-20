@@ -1,10 +1,19 @@
+import { ClipboardCheck, ShieldCheck, Receipt, BadgeCheck } from 'lucide-react';
+
 import FaqContent from '../../components/faq/FaqContent/FaqContent';
 import QuestionForm from '../../components/faq/QuestionForm/QuestionForm';
-import TrustStrip from '../../components/faq/TrustStrip/TrustStrip';
 
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import faqHero from '../../assets/images/faq/faq-hero.webp';
+
+const trustItems = [
+  { title: 'Workmanship Warranty', Icon: BadgeCheck },
+  { title: 'Free Estimates', Icon: ClipboardCheck },
+  { title: 'Licensed & Insured', Icon: ShieldCheck },
+  { title: 'Honest Pricing', Icon: Receipt },
+];
 
 function FaqPage() {
   return (
@@ -24,8 +33,8 @@ function FaqPage() {
           to: '/projects',
         }}
       />
+      <TrustStrip items={trustItems} ariaLabel='FAQ' />
 
-      <TrustStrip />
       <FaqContent />
       <QuestionForm />
     </>

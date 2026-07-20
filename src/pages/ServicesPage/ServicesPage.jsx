@@ -1,9 +1,19 @@
+import { ShieldCheck, Hammer, Medal, BadgeCheck } from 'lucide-react';
+
 import ServicesCta from '../../components/services/ServicesCta/ServicesCta';
 import ServicesGrid from '../../components/services/ServicesGrid/ServicesGrid';
-import Stats from '../../components/home/Stats/Stats'; // NEED TO MOVE TO COMMON
+
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import servicesHero from '../../assets/images/services/services-hero.webp';
+
+const trustItems = [
+  { title: 'Licensed & Insured', Icon: ShieldCheck },
+  { title: 'Premium Materials', Icon: Hammer },
+  { title: 'Certified Professionals', Icon: Medal },
+  { title: 'Workmanship Warranty', Icon: BadgeCheck },
+];
 
 function ServicesPage() {
   return (
@@ -23,8 +33,8 @@ function ServicesPage() {
           to: '/projects',
         }}
       />
+      <TrustStrip items={trustItems} ariaLabel='Service advantages' />
 
-      <Stats />
       <ServicesGrid />
       <ServicesCta />
     </>

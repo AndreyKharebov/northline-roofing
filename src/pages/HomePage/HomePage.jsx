@@ -1,5 +1,5 @@
-import HomeHero from '../../components/home/homeHero/HomeHero';
-import HomeServiceArea from '../../components/home/homeServiceAreaStrip/homeServiceArea';
+import Hero from '../../components/home/Hero/Hero';
+import ServiceArea from '../../components/home/ServiceAreaStrip/ServiceAreaStrip';
 
 
 import ServicesPreview from '../../components/home/Services/ServicesPreview';
@@ -15,8 +15,8 @@ import EstimatePreview from '../../components/home/Estimate/EstimatePreview';
 function HomePage() {
   return (
     <>
-      <HomeHero />
-      <HomeServiceArea />
+      <Hero />
+      <ServiceArea />
 
       <ServicesPreview />
       <AboutPreview />

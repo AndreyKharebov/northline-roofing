@@ -1,11 +1,21 @@
+import { Users, MessageSquare, ShieldCheck, MapPinned } from 'lucide-react';
+
 import AboutBottom from '../../components/about/AboutBottom/AboutBottom';
 import OurStory from '../../components/about/OurStory/OurStory';
 import Team from '../../components/about/Team/Team';
 import Values from '../../components/about/Values/Values';
 
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import aboutHero from '../../assets/images/about/about-hero.webp';
+
+const trustItems = [
+  { title: 'Experienced Team', Icon: Users },
+  { title: 'Honest Communication', Icon: MessageSquare },
+  { title: 'Licensed & Insured', Icon: ShieldCheck },
+  { title: 'Locally Trusted', Icon: MapPinned },
+];
 
 function AboutPage() {
   return (
@@ -25,6 +35,8 @@ function AboutPage() {
           to: '/services',
         }}
       />
+      <TrustStrip items={trustItems} ariaLabel='About Us' />
+
       <OurStory />
       <Values />
       <Team />

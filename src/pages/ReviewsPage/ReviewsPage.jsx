@@ -1,12 +1,21 @@
+import { Star, HeartHandshake, ShieldCheck, BadgeCheck } from 'lucide-react';
+
 import FeaturedReviews from '../../components/reviews/FeaturedReviews/FeaturedReviews';
 import RatingsSummary from '../../components/reviews/RatingsSummary/RatingsSummary';
 import ReviewsBottom from '../../components/reviews/ReviewsBottom/ReviewsBottom';
 import ReviewsList from '../../components/reviews/ReviewsList/ReviewsList';
-import ServiceAreaStrip from '../../components/reviews/ServiceAreaStrip/ServiceAreaStrip';
 
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import reviewsHero from '../../assets/images/reviews/reviews-hero.webp';
+
+const trustItems = [
+  { title: '5-Star Reviews', Icon: Star },
+  { title: 'Trusted by Homeowners', Icon: HeartHandshake },
+  { title: 'Reliable Service', Icon: ShieldCheck },
+  { title: 'Recommended by Clients', Icon: BadgeCheck },
+];
 
 function ReviewsPage() {
   return (
@@ -26,8 +35,8 @@ function ReviewsPage() {
           to: '/projects',
         }}
       />
+      <TrustStrip items={trustItems} ariaLabel='Our Reviews' />
 
-      <ServiceAreaStrip />
       <RatingsSummary />
       <FeaturedReviews />
       <ReviewsList />

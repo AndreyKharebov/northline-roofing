@@ -1,4 +1,4 @@
-import './homeServiceArea.css';
+import './ServiceAreaStrip.css';
 
 const serviceAreas = [
   'Philadelphia',
@@ -8,7 +8,7 @@ const serviceAreas = [
   'Chester County',
 ];
 
-function HomeServiceArea() {
+function ServiceArea() {
   return (
     <section className='service-area'>
       <div className='container service-area__inner'>
@@ -58,4 +58,4 @@ function HomeServiceArea() {
   );
 }
 
-export default HomeServiceArea;
+export default ServiceArea;

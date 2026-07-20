@@ -1,11 +1,20 @@
-import EstimateBenefits from '../../components/estimate/EstimateBenefits/EstimateBenefits';
+import { ClipboardCheck, ShieldCheck, Receipt, Clock3 } from 'lucide-react';
+
 import EstimateForm from '../../components/estimate/EstimateForm/EstimateForm';
 import EstimateSteps from '../../components/estimate/EstimateSteps/EstimateSteps';
 import EstimateTrust from '../../components/estimate/EstimateTrust/EstimateTrust';
 
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import estimateHero from '../../assets/images/estimate/estimate-hero.webp';
+
+const trustItems = [
+  { title: 'Free Estimates', Icon: ClipboardCheck },
+  { title: 'Fast Response', Icon: Clock3 },
+  { title: 'No Hidden Fees', Icon: Receipt },
+  { title: 'Licensed & Insured', Icon: ShieldCheck },
+];
 
 function EstimatePage() {
   return (
@@ -26,7 +35,7 @@ function EstimatePage() {
         }}
       />
 
-      <EstimateBenefits />
+      <TrustStrip items={trustItems} ariaLabel='Estimate Request' />
       <EstimateForm />
       <EstimateSteps />
       <EstimateTrust />

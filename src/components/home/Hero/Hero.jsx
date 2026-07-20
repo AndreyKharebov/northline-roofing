@@ -2,7 +2,7 @@ import Button from '../../common/Button/Button';
 
 import heroHouse from '../../../assets/images/home/home-hero-house.webp';
 
-import './HomeHero.css';
+import './Hero.css';
 
 function HomeHero() {
   return (

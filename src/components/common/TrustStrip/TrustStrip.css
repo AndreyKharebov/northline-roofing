@@ -1,0 +1,137 @@
+.trust-strip {
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+.trust-strip__container {
+  padding-block: 20px;
+}
+
+.trust-strip__list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.trust-strip__item {
+  display: flex;
+  min-width: 0;
+  min-height: 78px;
+  align-items: center;
+  gap: 14px;
+  padding-block: 16px;
+}
+
+.trust-strip__item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trust-strip__icon {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.trust-strip__icon svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+.trust-strip__title {
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+/* Две колонки */
+
+@media (min-width: 560px) {
+  .trust-strip__container {
+    padding-block: 24px;
+  }
+
+  .trust-strip__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-strip__item {
+    min-height: 92px;
+    padding: 18px;
+  }
+
+  .trust-strip__item:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  .trust-strip__item:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .trust-strip__item:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+/* Четыре колонки */
+
+@media (min-width: 860px) {
+  .trust-strip__container {
+    padding-block: 0;
+  }
+
+  .trust-strip__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .trust-strip__item {
+    min-height: 108px;
+    justify-content: center;
+    padding: 22px 18px;
+  }
+
+  .trust-strip__item:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .trust-strip__item:nth-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .trust-strip__item:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .trust-strip__icon {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
+
+  .trust-strip__icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .trust-strip__title {
+    max-width: 145px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .trust-strip__item {
+    gap: 16px;
+    padding-inline: 28px;
+  }
+
+  .trust-strip__title {
+    font-size: 0.95rem;
+  }
+}

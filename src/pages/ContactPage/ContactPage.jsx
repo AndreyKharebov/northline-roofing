@@ -1,11 +1,21 @@
+import { ClipboardCheck, ShieldCheck, BadgeCheck, Clock3 } from 'lucide-react';
+
 import BusinessHours from '../../components/contact/BusinessHours/BusinessHours';
 import ContactCta from '../../components/contact/ContactCta/ContactCta';
 import ContactMain from '../../components/contact/ContactMain/ContactMain';
 import ServiceArea from '../../components/contact/ServiceArea/ServiceArea';
 
 import PageHero from '../../components/common/PageHero/PageHero';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 import contactHero from '../../assets/images/contact/contact-hero.webp';
+
+const trustItems = [
+  { title: 'Free Estimates', Icon: ClipboardCheck },
+  { title: 'Fast Response', Icon: Clock3 },
+  { title: 'Licensed & Insured', Icon: ShieldCheck },
+  { title: 'Workmanship Warranty', Icon: BadgeCheck },
+];
 
 function ContactPage() {
   return (
@@ -25,6 +35,7 @@ function ContactPage() {
           href: '#contact-form',
         }}
       />
+      <TrustStrip items={trustItems} ariaLabel='Contact Us' />
 
       <ContactMain />
       <ServiceArea />

@@ -1,3 +1,5 @@
+import { House, SearchCheck, Hammer, ThumbsUp } from 'lucide-react';
+
 import PageHero from '../../components/common/PageHero/PageHero';
 
 import ProjectsCta from '../../components/projects/ProjectsCta/ProjectsCta';
@@ -5,6 +7,14 @@ import ProjectsGallery from '../../components/projects/ProjectsGallery/ProjectsG
 import QualityCommitment from '../../components/projects/QualityCommitment/QualityCommitment';
 
 import projectsHero from '../../assets/images/projects/projects-hero.webp';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
+
+const trustItems = [
+  { title: '500+ Completed Projects', Icon: House },
+  { title: 'Attention to Detail', Icon: SearchCheck },
+  { title: 'Quality Craftsmanship', Icon: Hammer },
+  { title: '4.9 Customer Satisfaction', Icon: ThumbsUp },
+];
 
 function ProjectsPage() {
   return (
@@ -24,7 +34,8 @@ function ProjectsPage() {
           to: '/services',
         }}
       />
-      
+      <TrustStrip items={trustItems} ariaLabel='Our Projects' />
+
       <ProjectsGallery />
       <QualityCommitment />
       <ProjectsCta />
