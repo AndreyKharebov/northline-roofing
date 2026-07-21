@@ -7,6 +7,8 @@ import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 import ServicesPreview from '../../components/common/ServicesPreview/ServicesPreview';
 
 import servicesHero from '../../assets/images/services/services-hero.webp';
+import ServiceProcess from '../../components/services/ServiceProcess/ServiceProcess';
+import QuestionForm from '../../components/faq/QuestionForm/QuestionForm';
 
 const trustItems = [
   { title: 'Licensed & Insured', Icon: ShieldCheck },
@@ -42,7 +44,8 @@ function ServicesPage() {
         extended={true}
       />
 
-      <ServicesCta />
+      <ServiceProcess />
+      <QuestionForm />
     </>
   );
 }

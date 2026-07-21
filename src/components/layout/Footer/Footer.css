@@ -1,6 +1,7 @@
 .site-footer {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
+  border-top: 2px solid #e7a515;
 }
 
 .site-footer__content {
