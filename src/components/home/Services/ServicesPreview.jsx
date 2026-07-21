@@ -1,12 +1,14 @@
+import { useServicesCards } from '../../../hooks/useServicesCards';
+
 import SectionHeading from '../../common/SectionHeading/SectionHeading';
 import Button from '../../common/Button/Button';
+import ServiceCard from './ServiceCard';
 
 import './ServicesPreview.css';
 
-import { services } from '../../../data/services';
-import ServiceCard from './ServiceCard';
-
 function ServicesPreview() {
+  const { data: services = [], isPending, isError, error } = useServicesCards();
+
   return (
     <section className='services-preview section'>
       <div className='container'>
@@ -17,11 +19,24 @@ function ServicesPreview() {
           align='center'
         />
 
-        <div className='services-preview__grid'>
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
-        </div>
+        {isPending && (
+          <p className='services-preview__status'>Loading services...</p>
+        )}
+
+        {isError && (
+          <p className='services-preview__status services-preview__status--error'>
+            {error.message}
+          </p>
+        )}
+
+        {!isPending && !isError && (
+          <div className='services-preview__list'>
+            {services.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+        )}
+
         <div className='services-preview__action'>
           <Button to='/services' variant='secondary'>
             View All Services
