@@ -1,10 +1,10 @@
 import { ShieldCheck, Hammer, Medal, BadgeCheck } from 'lucide-react';
 
 import ServicesCta from '../../components/services/ServicesCta/ServicesCta';
-import ServicesGrid from '../../components/services/ServicesGrid/ServicesGrid';
 
 import PageHero from '../../components/common/PageHero/PageHero';
 import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
+import ServicesPreview from '../../components/common/ServicesPreview/ServicesPreview';
 
 import servicesHero from '../../assets/images/services/services-hero.webp';
 
@@ -35,7 +35,13 @@ function ServicesPage() {
       />
       <TrustStrip items={trustItems} ariaLabel='Service advantages' />
 
-      <ServicesGrid />
+      <ServicesPreview
+        eyebrow='Our Services'
+        title='Quality Services, Built to Last'
+        description='We offer a full range of exterior services for residential properties. Each project is completed with care, precision, and attention to detail.'
+        extended={true}
+      />
+
       <ServicesCta />
     </>
   );

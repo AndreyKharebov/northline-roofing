@@ -2,13 +2,15 @@ import { Link } from 'react-router-dom';
 
 import './ServiceCard.css';
 
-function ServiceCard({ service }) {
-  const { title, slug, cardImage, cardIcon } = service;
+function ServiceCard({ service, extended }) {
+  const { title, slug, shortDescription, cardImage, cardIcon } = service;
+
+  console.log(shortDescription);
 
   const serviceUrl = `/services/${slug}`;
 
   return (
-    <article className='service-card'>
+    <article className={`service-card ${extended ? 'extended' : ''}`}>
       <div className='service-card__media'>
         <img
           className='service-card__image'
@@ -33,6 +35,10 @@ function ServiceCard({ service }) {
             {title}
           </Link>
         </h3>
+
+        {extended && (
+          <p className='service-card__description'>{shortDescription}</p>
+        )}
 
         <Link
           className='service-card__link'

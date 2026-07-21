@@ -1,4 +1,8 @@
 .services-preview {
+  background-color: var(--color-white);
+}
+
+.services-preview--green {
   background-color: var(--color-background);
 }
 
