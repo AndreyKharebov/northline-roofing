@@ -474,4 +474,99 @@ export const services = [
     updatedAt: '2026-07-21T00:00:00.000Z',
     publishedAt: '2026-07-21T00:00:00.000Z',
   },
+  {
+    _id: '6880375d8d0af64f9d5fd217',
+
+    // Данные для страницы /services
+    title: 'Roof Repair',
+    slug: 'roof-repair',
+    shortDescription:
+      'Professional roof repair for leaks, damaged shingles, flashing issues, and other problems that can compromise the protection of your home.',
+    cardImage: {
+      src: 'src/assets/images/services/roof-repair/card.png',
+      alt: 'Roofing contractor repairing a residential roof',
+    },
+    cardIcon: {
+      src: 'src/assets/images/services/roof-repair/icon.svg',
+      alt: 'Roof Repair',
+    },
+    status: 'published',
+    sortOrder: 2,
+  },
+  {
+    _id: '6880375d8d0af64f9d5fd218',
+
+    // Данные для страницы /services
+    title: 'Storm Damage',
+    slug: 'storm-damage',
+    shortDescription:
+      'Inspection and repair of roof and exterior damage caused by wind, hail, fallen debris, and severe weather conditions.',
+    cardImage: {
+      src: 'src/assets/images/services/storm-damage/card.png',
+      alt: 'Residential roof affected by severe storm damage',
+    },
+    cardIcon: {
+      src: 'src/assets/images/services/storm-damage/icon.svg',
+      alt: 'Storm Damage',
+    },
+    status: 'published',
+    sortOrder: 3,
+  },
+  {
+    _id: '6880375d8d0af64f9d5fd219',
+
+    // Данные для страницы /services
+    title: 'Siding',
+    slug: 'siding',
+    shortDescription:
+      'Professional siding installation and replacement designed to improve your home’s appearance, energy efficiency, and protection from the elements.',
+    cardImage: {
+      src: 'src/assets/images/services/siding/card.png',
+      alt: 'Residential home with professionally installed exterior siding',
+    },
+    cardIcon: {
+      src: 'src/assets/images/services/siding/icon.svg',
+      alt: 'Siding',
+    },
+    status: 'published',
+    sortOrder: 4,
+  },
+  {
+    _id: '6880375d8d0af64f9d5fd220',
+
+    // Данные для страницы /services
+    title: 'Gutters',
+    slug: 'gutters',
+    shortDescription:
+      'Gutter installation, replacement, and repair to help direct rainwater away from your roof, siding, foundation, and landscaping.',
+    cardImage: {
+      src: 'src/assets/images/services/gutters/card.png',
+      alt: 'New gutter system installed along a residential roofline',
+    },
+    cardIcon: {
+      src: 'src/assets/images/services/gutters/icon.svg',
+      alt: 'Gutters',
+    },
+    status: 'published',
+    sortOrder: 5,
+  },
+  {
+    _id: '6880375d8d0af64f9d5fd221',
+
+    // Данные для страницы /services
+    title: 'Windows & Skylights',
+    slug: 'windows-skylights',
+    shortDescription:
+      'Window and skylight installation and replacement that improves natural light, ventilation, energy efficiency, and overall comfort.',
+    cardImage: {
+      src: 'src/assets/images/services/windows-skylights/card.png',
+      alt: 'Residential roof with professionally installed skylights',
+    },
+    cardIcon: {
+      src: 'src/assets/images/services/windows-skylights/icon.svg',
+      alt: 'Windows and Skylights',
+    },
+    status: 'published',
+    sortOrder: 6,
+  },
 ];
