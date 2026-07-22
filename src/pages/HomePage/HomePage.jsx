@@ -36,12 +36,13 @@ function HomePage() {
           'No-obligation consultation',
           'Clear project recommendations',
         ]}
-        buttonText='Get Free Estimate'
-        buttonTo='/contact'
-        phone='(215) 555-0198'
-        phoneHref='tel:+12155550198'
-        preferToSpeak
-        emergency
+        // buttonText='Get Free Estimate'
+        // buttonTo='/contact'
+        // phone='(215) 555-0198'
+        // phoneHref='tel:+12155550198'
+        // preferToSpeak
+        // emergency
+        className='green'
       >
         <ConfigurableForm />
       </ConversionSection>

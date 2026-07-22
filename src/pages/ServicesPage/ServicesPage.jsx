@@ -1,14 +1,15 @@
 import { ShieldCheck, Hammer, Medal, BadgeCheck } from 'lucide-react';
 
-import ServicesCta from '../../components/services/ServicesCta/ServicesCta';
 
 import PageHero from '../../components/common/PageHero/PageHero';
 import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 import ServicesPreview from '../../components/common/ServicesPreview/ServicesPreview';
+import ServiceProcess from '../../components/services/ServiceProcess/ServiceProcess';
+import ConversionSection from '../../components/common/ConversionSection/ConversionSection';
+import ConfigurableForm from '../../components/common/ConfigurableForm/ConfigurableForm';
 
 import servicesHero from '../../assets/images/services/services-hero.webp';
-import ServiceProcess from '../../components/services/ServiceProcess/ServiceProcess';
-import QuestionForm from '../../components/faq/QuestionForm/QuestionForm';
+
 
 const trustItems = [
   { title: 'Licensed & Insured', Icon: ShieldCheck },
@@ -45,7 +46,25 @@ function ServicesPage() {
       />
 
       <ServiceProcess />
-      <QuestionForm />
+      <ConversionSection
+        eyebrow='Request an Estimate'
+        title='Start With a Few Project Details'
+        description='Complete the form and a member of our team will contact you to review the project and arrange the next appropriate step.'
+        benefits={[
+          'Free project estimate',
+          'No-obligation consultation',
+          'Clear project recommendations',
+        ]}
+        // buttonText='Get Free Estimate'
+        // buttonTo='/contact'
+        // phone='(215) 555-0198'
+        // phoneHref='tel:+12155550198'
+        // preferToSpeak
+        // emergency
+        className='green'
+      >
+        <ConfigurableForm />
+      </ConversionSection>
     </>
   );
 }

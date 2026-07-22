@@ -35,7 +35,7 @@ function ProjectsPage() {
         }}
       />
       <TrustStrip items={trustItems} ariaLabel='Our Projects' />
-
+      
       <ProjectsGallery />
       <QualityCommitment />
       <ProjectsCta />

@@ -1,7 +1,6 @@
 import { ClipboardCheck, ShieldCheck, BadgeCheck, Clock3 } from 'lucide-react';
 
 import BusinessHours from '../../components/contact/BusinessHours/BusinessHours';
-import ContactCta from '../../components/contact/ContactCta/ContactCta';
 import ContactMain from '../../components/contact/ContactMain/ContactMain';
 import ServiceArea from '../../components/contact/ServiceArea/ServiceArea';
 
@@ -40,7 +39,6 @@ function ContactPage() {
       <ContactMain />
       <ServiceArea />
       <BusinessHours />
-      <ContactCta />
     </>
   );
 }
