@@ -1,0 +1,135 @@
+.configurable-form {
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background-color: var(--color-background);
+}
+
+.configurable-form__heading p {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.configurable-form__heading h2 {
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.configurable-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.configurable-form__field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.configurable-form input,
+.configurable-form select,
+.configurable-form textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.configurable-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.configurable-form input:focus,
+.configurable-form select:focus,
+.configurable-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid rgb(23 63 53 / 15%);
+}
+
+.configurable-form input[aria-invalid='true'],
+.configurable-form select[aria-invalid='true'],
+.configurable-form textarea[aria-invalid='true'] {
+  border-color: #b42318;
+}
+
+.configurable-form__error {
+  color: #b42318;
+  font-size: 0.8rem;
+}
+
+.configurable-form__consent label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.configurable-form__consent input {
+  width: 18px;
+  min-height: 18px;
+  flex: 0 0 18px;
+  margin-top: 2px;
+}
+
+.configurable-form__submit {
+  min-height: 54px;
+  padding: 14px 20px;
+  border-radius: var(--radius-small);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.configurable-form__submit:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.configurable-form__privacy {
+  color: var(--color-text-light);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.configurable-form__success {
+  padding: 18px;
+  border-radius: var(--radius-small);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.configurable-form__success p {
+  margin-top: 5px;
+}
+
+@media (min-width: 700px) {
+  .configurable-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 32px;
+  }
+
+  .configurable-form__heading,
+  .configurable-form__field--full,
+  .configurable-form__consent,
+  .configurable-form__submit,
+  .configurable-form__privacy,
+  .configurable-form__success {
+    grid-column: 1 / -1;
+  }
+}
+
