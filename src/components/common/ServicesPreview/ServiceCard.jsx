@@ -5,8 +5,6 @@ import './ServiceCard.css';
 function ServiceCard({ service, extended }) {
   const { title, slug, shortDescription, cardImage, cardIcon } = service;
 
-  console.log(shortDescription);
-
   const serviceUrl = `/services/${slug}`;
 
   return (
@@ -32,9 +30,7 @@ function ServiceCard({ service, extended }) {
           </div>
 
           <h3 className='service-card__title'>
-            {/* <Link className='service-card__title-link' to={serviceUrl}> */}
             {title}
-            {/* </Link> */}
           </h3>
 
           {extended && (

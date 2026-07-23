@@ -1,0 +1,271 @@
+.feature-steps {
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.feature-steps--green {
+  background-color: var(--color-background);
+}
+
+/* List */
+
+.feature-steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 680px;
+  margin: 40px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Single item */
+
+.feature-step {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* Mobile vertical timeline */
+
+.feature-step__timeline {
+  position: relative;
+  display: flex;
+  flex: 0 0 44px;
+  justify-content: center;
+}
+
+.feature-step__timeline::after {
+  position: absolute;
+  top: 44px;
+  bottom: -24px;
+  left: 50%;
+  width: 1px;
+  background-color: var(--color-border, #d8e1dc);
+  content: '';
+  transform: translateX(-50%);
+}
+
+.feature-step:last-child .feature-step__timeline::after {
+  display: none;
+}
+
+.feature-step__number {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cfdcd4;
+  border-radius: 50%;
+  background-color: #eef3ef;
+  color: var(--color-primary, #123f33);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Card */
+
+.feature-step__card {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid #e3e8e5;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  box-shadow: 0 10px 28px rgb(20 54 45 / 6%);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.feature-step__card:hover {
+  border-color: #cad8d0;
+  box-shadow: 0 16px 36px rgb(20 54 45 / 10%);
+  transform: translateY(-3px);
+}
+
+/* Icon */
+
+.feature-step__icon {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background-color: #edf3ee;
+  color: var(--color-primary, #123f33);
+}
+
+.feature-step__icon svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.6;
+}
+
+/* Content */
+
+.feature-step__title {
+  margin: 0;
+  color: var(--color-heading, #102b24);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.feature-step__divider {
+  width: 42px;
+  height: 1px;
+  margin: 18px 0;
+  background-color: var(--color-primary, #1b5a48);
+}
+
+.feature-step__description {
+  margin: 0;
+  color: var(--color-text, #5c6461);
+  font-size: 0.975rem;
+  line-height: 1.65;
+}
+
+/* Bottom badge */
+
+.feature-steps__badge {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 32px auto 0;
+  padding: 12px 18px;
+  border-radius: 5px;
+  background-color: #edf3ee;
+  color: var(--color-heading, #102b24);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.feature-steps__badge-icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--color-primary, #1b5a48);
+}
+
+.feature-steps__badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tablet */
+
+@media (min-width: 680px) {
+  .feature-steps__list {
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+    max-width: none;
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .feature-step {
+    width: calc(50% - 12px);
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .feature-step__timeline {
+    flex-basis: auto;
+    align-items: center;
+  }
+
+  .feature-step__timeline::after {
+    display: none;
+  }
+
+  .feature-step__card {
+    height: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 980px) {
+  .feature-steps__list {
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 56px;
+  }
+
+  .feature-step {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+
+  /*
+    Линия находится внутри каждого пункта и соединяет
+    его номер со следующим. Поэтому число пунктов может быть любым.
+  */
+
+  .feature-step__timeline::after {
+    position: absolute;
+    top: 50%;
+    right: calc(-50% - 10px);
+    bottom: auto;
+    left: calc(50% + 22px);
+    display: block;
+    width: auto;
+    height: 1px;
+    background-color: #bfd1c6;
+    content: '';
+    transform: none;
+  }
+
+  .feature-step:last-child .feature-step__timeline::after {
+    display: none;
+  }
+
+  .feature-step__number {
+    width: 46px;
+    height: 46px;
+  }
+
+  .feature-step__card {
+    min-height: 340px;
+    padding: 30px 22px;
+  }
+
+  .feature-step__icon {
+    width: 78px;
+    height: 78px;
+  }
+
+  .feature-step__title {
+    font-size: 1.05rem;
+  }
+
+  .feature-step__description {
+    font-size: 0.925rem;
+  }
+
+  .feature-steps__badge {
+    margin-top: 40px;
+  }
+}

@@ -2,13 +2,11 @@ import { Users, MessageSquare, ShieldCheck, MapPinned } from 'lucide-react';
 
 import OurStory from '../../components/about/OurStory/OurStory';
 import Team from '../../components/about/Team/Team';
-import Values from '../../components/about/Values/Values';
-
 import PageHero from '../../components/common/PageHero/PageHero';
 import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 import ConversionSection from '../../components/common/ConversionSection/ConversionSection';
 import ConfigurableForm from '../../components/common/ConfigurableForm/ConfigurableForm';
-
+import FeatureSteps from '../../components/common/FeatureSteps/FeatureSteps';
 import aboutHero from '../../assets/images/about/about-hero.webp';
 
 const trustItems = [
@@ -39,45 +37,36 @@ function AboutPage() {
       <TrustStrip items={trustItems} ariaLabel='About Us' />
 
       <OurStory />
-      <Values />
+      <FeatureSteps
+        eyebrow='Our Values'
+        title='How We Work, Every Day'
+        align='center'
+        version='values'
+        type='green'
+      />
+
       <Team />
       <ConversionSection
         eyebrow='Request an Estimate'
-        title='Start With a Few Project Details'
-        description='Complete the form and a member of our team will contact you to review the project and arrange the next appropriate step.'
+        title='A Team You Can Trust'
+        description={`We're committed to honest communication, quality workmanship, and dependable service. Reach out today to discuss your project.`}
         // benefits={[
         //   'Free project estimate',
         //   'No-obligation consultation',
         //   'Clear project recommendations',
         // ]}
-        // buttonText='Get Free Estimate'
-        // buttonTo='/contact'
-        // phone='(215) 555-0198'
-        // phoneHref='tel:+12155550198'
+        buttonText='Get Free Estimate'
+        buttonTo='/contact'
+        phone='(215) 555-0198'
+        phoneHref='tel:+12155550198'
         // preferToSpeak
         // emergency
         className='green'
       >
-        <ConfigurableForm />
+        <ConfigurableForm version='short' />
       </ConversionSection>
     </>
   );
 }
 
 export default AboutPage;
-
-// <PageHero
-//   eyebrow='Roofing Services'
-//   title='Roof Replacement'
-//   description='A new roof is one of the best ways to protect your home and increase its value. We provide complete roof replacements with high-quality materials and expert installation.'
-//   image={servicesHero}
-//   type='white'
-//   primaryAction={{
-//     label: 'Get Free Estimate',
-//     to: '/request-estimate',
-//   }}
-//   secondaryAction={{
-//     label: 'View Our Projects',
-//     to: '/projects',
-//   }}
-// />

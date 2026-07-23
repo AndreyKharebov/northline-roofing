@@ -1,13 +1,12 @@
 import { House, SearchCheck, Hammer, ThumbsUp } from 'lucide-react';
 
 import PageHero from '../../components/common/PageHero/PageHero';
-
-import ProjectsCta from '../../components/projects/ProjectsCta/ProjectsCta';
+import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
+import ConversionSection from '../../components/common/ConversionSection/ConversionSection';
+import ConfigurableForm from '../../components/common/ConfigurableForm/ConfigurableForm';
 import ProjectsGallery from '../../components/projects/ProjectsGallery/ProjectsGallery';
-import QualityCommitment from '../../components/projects/QualityCommitment/QualityCommitment';
 
 import projectsHero from '../../assets/images/projects/projects-hero.webp';
-import TrustStrip from '../../components/common/TrustStrip/TrustStrip';
 
 const trustItems = [
   { title: '500+ Completed Projects', Icon: House },
@@ -35,10 +34,26 @@ function ProjectsPage() {
         }}
       />
       <TrustStrip items={trustItems} ariaLabel='Our Projects' />
-      
       <ProjectsGallery />
-      <QualityCommitment />
-      <ProjectsCta />
+      <ConversionSection
+        eyebrow='Request an Estimate'
+        title='Ready to Start Your Project?'
+        description={`Inspired by our recent work? Contact our team to discuss your project and receive a free, no-obligation estimate.`}
+        // benefits={[
+        //   'Free project estimate',
+        //   'No-obligation consultation',
+        //   'Clear project recommendations',
+        // ]}
+        buttonText='Get Free Estimate'
+        buttonTo='/contact'
+        phone='(215) 555-0198'
+        phoneHref='tel:+12155550198'
+        // preferToSpeak
+        // emergency
+        className='green'
+      >
+        <ConfigurableForm version='short' />
+      </ConversionSection>
     </>
   );
 }

@@ -37,8 +37,8 @@ function EstimatePage() {
       <TrustStrip items={trustItems} ariaLabel='Estimate Request' />
       <ConversionSection
         eyebrow='Request an Estimate'
-        title='Start With a Few Project Details'
-        description='Complete the form and a member of our team will contact you to review the project and arrange the next appropriate step.'
+        title='Start Your Project Today'
+        description='Tell us about your roofing or exterior project, and our team will contact you to discuss the next steps.'
         // benefits={[
         //   'Free project estimate',
         //   'No-obligation consultation',
@@ -52,7 +52,7 @@ function EstimatePage() {
         emergency
         className='white'
       >
-        <ConfigurableForm />
+        <ConfigurableForm version='full' />
       </ConversionSection>
       <EstimateSteps />
     </>
